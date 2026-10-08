@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nishant — Creative Developer &amp; B.Tech CS Student</title>
+  <meta name="description" content="Cinematic editorial portfolio of Nishant, a first-year Computer Science B.Tech student in India exploring C systems, prompt engineering, and creative technology.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23E6392E'/><text x='50%' y='65%' font-family='Anton' font-size='56' fill='%23FFFFFF' text-anchor='middle'>N</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       0. FULL-SCREEN LOADING INTRO
+       ========================================================================== -->
+  <div id="loader-screen" role="progressbar" aria-label="Loading portfolio experience" aria-valuemin="0" aria-valuemax="100">
+    <div class="loader-container">
+      <div class="loader-ring-wrapper">
+        <div class="loader-thin-spinner"></div>
+        <svg class="loader-svg-ring" viewBox="0 0 160 160">
+          <circle class="loader-circle-bg" cx="80" cy="80" r="75" fill="none" stroke-width="2"/>
+          <circle id="loader-progress-circle" class="loader-circle-progress" cx="80" cy="80" r="75" fill="none" stroke-width="3"/>
+        </svg>
+        <div class="loader-counter-box">
+          <span id="loader-counter" class="loader-percentage">0%</span>
+        </div>
+      </div>
+      <div class="loader-hello-word">hello.</div>
+      <div class="loader-meta">NISHANT // B.TECH CS '26 // INDIA</div>
+      <button id="loader-skip-btn" class="loader-skip-btn" aria-label="Skip Loading Screen">Skip Intro [ESC]</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       1. FIXED MINIMAL NAVIGATION
+       ========================================================================== -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Nishant Homepage">
+        <span class="brand-dot"></span>
+        <span>NISHANT</span>
+        <span class="brand-sub">/ B.TECH '26</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#expertise" class="nav-link">Expertise</a></li>
+          <li><a href="#work" class="nav-link">Work</a></li>
+          <li><a href="#chapter" class="nav-link">Chapter</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="nav-ist-clock" title="Current Time in India (IST)">
+          <span class="status-dot"></span>
+          <span>IST:</span>
+          <span id="ist-clock-time">12:24:27</span>
+        </div>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-drawer-links">
+      <li><a href="#about" class="mobile-drawer-link">01. About</a></li>
+      <li><a href="#expertise" class="mobile-drawer-link">02. Expertise</a></li>
+      <li><a href="#work" class="mobile-drawer-link">03. Selected Work</a></li>
+      <li><a href="#chapter" class="mobile-drawer-link">04. Current Chapter</a></li>
+      <li><a href="#projects" class="mobile-drawer-link">05. Real Projects</a></li>
+      <li><a href="#blog" class="mobile-drawer-link">06. Blog</a></li>
+      <li><a href="#contact" class="mobile-drawer-link" style="color: var(--accent-red);">07. Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-meta">
+      <div><strong>Location:</strong> India / IST Timezone</div>
+      <div><strong>Status:</strong> B.Tech Year One — Exploring Low-Level &amp; AI</div>
+      <div><strong>Email:</strong> <a href="mailto:hello@nishant.dev" style="color: var(--accent-red);">hello@nishant.dev</a></div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        
+        <!-- Small Mono Labels Row -->
+        <div class="hero-meta-top">
+          <span class="mono-label">Code × AI × Curiosity</span>
+          <span class="mono-tag green">
+            <span class="status-dot"></span>
+            Available: Summer '26 / Internships 2030
+          </span>
+          <span class="mono-label">Portfolio / 2026</span>
+          <span class="mono-label">B.Tech / Year One — India / IST</span>
+        </div>
+
+        <!-- Monumental Uppercase Title -->
+        <div class="hero-title-container">
+          <h1 class="hero-title-line-1">CREATIVE</h1>
+          <h2 class="hero-title-line-2">Developer <span class="serif-accent">&amp; Student</span></h2>
+        </div>
+
+        <!-- Bottom Grid: Intro + Circular Scroll Button + Coordinates -->
+        <div class="hero-bottom-grid">
+          <div class="hero-intro-text">
+            First-year Computer Science undergraduate dissecting the architecture between <strong>low-level C memory models</strong> and <strong>high-level autonomous prompt systems</strong>. Learning by shipping experiments that fuse precision, engineering discipline, and playful tactile design.
+          </div>
+
+          <div class="scroll-btn-wrapper">
+            <a href="#about" class="scroll-circle-btn" aria-label="Scroll down to About section">
+              <svg class="rotating-text-svg" viewBox="0 0 100 100">
+                <path id="circleTextPath" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" fill="none"/>
+                <text class="rotating-text-path">
+                  <textPath href="#circleTextPath">SCROLL DOWN · EXPLORE · SCROLL DOWN · </textPath>
+                </text>
+              </svg>
+              <div class="scroll-arrow-center">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-coords-box">
+            <span class="mono-label">LAT / LONG: 28.6139° N, 77.2090° E</span>
+            <span class="mono-label">SYSTEM: POSIX / CLANG / LLM</span>
+            <span class="mono-label" style="color: var(--accent-red); font-weight: 600;">STATUS: ACTIVE LAB SESSION</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. ABOUT SECTION (DARK EDITORIAL)
+         ========================================================================== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Column 1: Bio & Facts -->
+          <div class="about-content">
+            <div class="section-eyebrow">// 01. IDENTITY &amp; PHILOSOPHY</div>
+            <h2 class="about-heading">Learning by making.</h2>
+            <p class="about-bio">
+              Currently pursuing my B.Tech in <strong>Computer Science &amp; Engineering</strong> in India. My journey started with pure curiosity: unravelling how operating systems govern CPU cycles and memory heaps, then scaling outward to orchestrating modern AI inference loops.
+            </p>
+            <p class="about-bio">
+              I believe true developer mastery doesn't come from passive tutorials, but from <strong>breaking things at the byte level</strong>. Whether writing custom terminal graphics engines in raw C or constructing deterministic prompt evaluation matrices, I treat code as both an engineering discipline and a creative craft.
+            </p>
+
+            <!-- Three Key Facts as requested -->
+            <div class="about-facts-list">
+              <div class="fact-item">
+                <span class="fact-label">Achievement</span>
+                <span class="fact-value">Hackathon participant &amp; rapid prototyper</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Off-screen</span>
+                <span class="fact-value">Drawing &amp; badminton enthusiast</span>
+              </div>
+              <div class="fact-item">
+                <span class="fact-label">Available</span>
+                <span class="fact-value">Internships 2030 (Open for early freshman research roles)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Grayscale Portrait with Warm Light-Gray Background & Facts Overlay -->
+          <div class="about-portrait-wrapper">
+            <div class="portrait-frame">
+              <img src="assets/portrait.jpg" alt="Professional Portrait of Nishant" class="portrait-img" width="1024" height="1024" loading="eager">
+              
+              <!-- Facts Overlaid at Bottom of Portrait -->
+              <div class="portrait-overlay-facts">
+                <div class="overlay-facts-grid">
+                  <div class="overlay-fact-col">
+                    <span class="overlay-fact-label">Achievement</span>
+                    <span class="overlay-fact-val">Hackathon participant</span>
+                  </div>
+                  <div class="overlay-fact-col">
+                    <span class="overlay-fact-label">Off-screen</span>
+                    <span class="overlay-fact-val">Drawing &amp; badminton</span>
+                  </div>
+                  <div class="overlay-fact-col">
+                    <span class="overlay-fact-label">Available</span>
+                    <span class="overlay-fact-val">Internships 2030</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. EXPERTISE SECTION (DARK 3-COLUMN GRID WITH RED INVERT HOVER)
+         ========================================================================== -->
+    <section id="expertise" class="expertise-section">
+      <div class="container">
+        
+        <div class="section-header-row">
+          <div>
+            <div class="section-eyebrow">// 02. CORE PILLARS</div>
+            <h2 class="section-title-large">Expertise &amp; Craft</h2>
+          </div>
+          <p class="mono-label" style="color: var(--text-dark-secondary);">
+            HOVER CARDS TO INVERT ACCENTS · ARCHITECTED FOR FOUNDATIONAL STRENGTH
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+
+          <!-- Card 01: Prompt Engineering -->
+          <article class="expertise-card" tabindex="0">
+            <div class="card-top">
+              <span class="card-marker">(01)</span>
+              <div class="card-icon-box">
+                <!-- Neural / Prompt Icon -->
+                <svg class="card-icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Prompt Engineering</h3>
+              <p class="card-desc">“Clear prompts, useful systems, thoughtful results.”</p>
+            </div>
+          </article>
+
+          <!-- Card 02: AI Workflows -->
+          <article class="expertise-card" tabindex="0">
+            <div class="card-top">
+              <span class="card-marker">(02)</span>
+              <div class="card-icon-box">
+                <!-- Node Pipeline Icon -->
+                <svg class="card-icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="6" height="6" rx="1"/>
+                  <rect x="16" y="3" width="6" height="6" rx="1"/>
+                  <rect x="9" y="15" width="6" height="6" rx="1"/>
+                  <path d="M5 9v3a2 2 0 0 0 2 2h5M19 9v3a2 2 0 0 1-2 2h-5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">AI Workflows</h3>
+              <p class="card-desc">“Using AI to research, debug, and move ideas forward.”</p>
+            </div>
+          </article>
+
+          <!-- Card 03: C Language -->
+          <article class="expertise-card" tabindex="0">
+            <div class="card-top">
+              <span class="card-marker">(03)</span>
+              <div class="card-icon-box">
+                <!-- CPU / Memory Layout Icon -->
+                <svg class="card-icon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>
+                </svg>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">C Language</h3>
+              <p class="card-desc">“Learning memory, logic, and the foundations beneath software.”</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. WORK SECTION (EDGE-TO-EDGE EDITORIAL LIST)
+         ========================================================================== -->
+    <section id="work" class="work-section">
+      
+      <!-- Enormous edge-to-edge uppercase header -->
+      <!-- Refined edge-to-edge marquee ribbon -->
+      <div class="work-edge-header-wrapper" aria-hidden="true">
+        <div class="work-marquee-track">
+          <span class="work-marquee-item">WORK // SELECTED EXPERIMENTS</span>
+          <span class="work-marquee-item">CODE × SYSTEMS × AI</span>
+          <span class="work-marquee-item">PORTFOLIO // 2026</span>
+          <span class="work-marquee-item">WORK // SELECTED EXPERIMENTS</span>
+          <span class="work-marquee-item">CODE × SYSTEMS × AI</span>
+          <span class="work-marquee-item">PORTFOLIO // 2026</span>
+        </div>
+      </div>
+
+      <div class="container">
+        
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem;">
+          <span class="mono-label">// 03. INDEX OF BUILDS</span>
+          <span class="mono-label">CLICK ANY ROW FOR ARCHITECTURAL BREAKDOWN</span>
+        </div>
+
+        <div class="work-list" role="list">
+          
+          <!-- Experiment 01 -->
+          <div class="work-row" role="listitem" data-work-id="sustainability" tabindex="0" aria-label="View Sustainability Prototype details">
+            <span class="work-num">01</span>
+            <div class="work-title">Sustainability Prototype</div>
+            <div class="work-field">Hackathon</div>
+            <div class="work-year">2025</div>
+            <div class="work-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Experiment 02 -->
+          <div class="work-row" role="listitem" data-work-id="ai-assistant" tabindex="0" aria-label="View AI Study Assistant details">
+            <span class="work-num">02</span>
+            <div class="work-title">AI Study Assistant</div>
+            <div class="work-field">Prompting</div>
+            <div class="work-year">2026</div>
+            <div class="work-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Experiment 03 -->
+          <div class="work-row" role="listitem" data-work-id="terminal-games" tabindex="0" aria-label="View Terminal Games details">
+            <span class="work-num">03</span>
+            <div class="work-title">Terminal Games</div>
+            <div class="work-field">C Language</div>
+            <div class="work-year">2026</div>
+            <div class="work-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. CURRENT CHAPTER SECTION
+         ========================================================================== -->
+    <section id="chapter" class="chapter-section">
+      <div class="container">
+        <div class="chapter-grid">
+          
+          <!-- Workspace Image -->
+          <div class="chapter-media-wrapper">
+            <img src="assets/workspace.svg" alt="Nishant's Grayscale Workspace Illustration with Ultrawide Monitor, Mechanical Keyboard, Drawing Tablet, and Badminton Gear" class="chapter-img" width="900" height="650" loading="lazy">
+          </div>
+
+          <!-- Content: Student. Builder. Always curious. -->
+          <div class="chapter-content">
+            <div class="section-eyebrow">// 04. CURRENT CHAPTER</div>
+            <h2 class="chapter-headline">Student. Builder. Always curious.</h2>
+            <p class="chapter-text">
+              Engineering isn't solely what happens at the compiler prompt. When stepping away from terminal debuggers and algorithmic proofs, I recharge through fast-paced <strong>badminton rallies on the court</strong>, sketching character illustrations with fine ink, and losing track of time inside immersive <strong>ambient soundscapes</strong>.
+            </p>
+            <p class="chapter-text">
+              These tactile practices cultivate the same spatial patience required for systems engineering: observing patterns, executing deliberate movements, and appreciating elegant compositions.
+            </p>
+            <div class="chapter-tags">
+              <span class="mono-tag">🏸 Court Rallies</span>
+              <span class="mono-tag">✍️ Ink &amp; Character Sketching</span>
+              <span class="mono-tag">🎧 Ambient Drones</span>
+              <span class="mono-tag green">🌱 Year One in Progress</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. REAL PROJECTS SHOWCASE & EXPLORER
+         ========================================================================== -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        
+        <div class="section-header-row" style="border-bottom: 1px solid var(--border-light);">
+          <div>
+            <div class="section-eyebrow">// 05. ARTIFACTS &amp; CODE</div>
+            <h2 class="section-title-large" style="color: var(--ink-charcoal);">Real Projects</h2>
+          </div>
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <a href="projects.html" class="mono-tag" style="font-weight: 700;">Open Dedicated Projects Page →</a>
+          </div>
+        </div>
+
+        <!-- Filter Tags -->
+        <div class="filter-bar" role="toolbar" aria-label="Project Category Filters">
+          <button class="filter-btn active" data-filter="all">All Projects (4)</button>
+          <button class="filter-btn" data-filter="systems">C &amp; Systems</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Prompts</button>
+          <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 01 -->
+          <article class="project-card" data-category="hackathon ai" tabindex="0" onclick="window.location.href='projects.html#ecoscan'">
+            <div>
+              <div class="project-card-header">
+                <span class="project-code-badge">[PRJ-01 · HACKATHON]</span>
+                <span class="mono-label">2025</span>
+              </div>
+              <h3 class="project-card-title">EcoScan Lifecycle Prototype</h3>
+              <p class="project-card-desc">
+                An edge-computer-vision pipeline paired with an autonomous prompt model to identify hardware component waste and estimate carbon salvage metrics on local silicon.
+              </p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="project-stack-pill">OpenCV</span>
+              <span class="project-stack-pill">Prompt Pipeline</span>
+              <span class="project-stack-pill">Python</span>
+              <span class="project-stack-pill">FastAPI</span>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project-card" data-category="ai" tabindex="0" onclick="window.location.href='projects.html#syllabusgenie'">
+            <div>
+              <div class="project-card-header">
+                <span class="project-code-badge">[PRJ-02 · AI SYSTEMS]</span>
+                <span class="mono-label">2026</span>
+              </div>
+              <h3 class="project-card-title">SyllabusGenie Cognitive Tutor</h3>
+              <p class="project-card-desc">
+                A structured prompt-driven study companion that digests semester syllabi, isolates knowledge gaps, and produces interactive Socratic viva questions with deterministic feedback.
+              </p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="project-stack-pill">Structured Prompts</span>
+              <span class="project-stack-pill">TypeScript</span>
+              <span class="project-stack-pill">JSON Schema</span>
+              <span class="project-stack-pill">Node.js</span>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project-card" data-category="systems" tabindex="0" onclick="window.location.href='projects.html#rogueterminal'">
+            <div>
+              <div class="project-card-header">
+                <span class="project-code-badge">[PRJ-03 · C ARCHITECTURE]</span>
+                <span class="mono-label">2026</span>
+              </div>
+              <h3 class="project-card-title">RogueTerminal ASCII Engine</h3>
+              <p class="project-card-desc">
+                A 60-FPS terminal dungeon crawler written in ANSI C99 using double-buffered terminal escapements, custom arena memory allocators, and non-blocking I/O.
+              </p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="project-stack-pill">Pure C99</span>
+              <span class="project-stack-pill">Memory Arenas</span>
+              <span class="project-stack-pill">ANSI Escapes</span>
+              <span class="project-stack-pill">Clang</span>
+            </div>
+          </article>
+
+          <!-- Project 04 -->
+          <article class="project-card" data-category="systems" tabindex="0" onclick="window.location.href='projects.html#memorypool'">
+            <div>
+              <div class="project-card-header">
+                <span class="project-code-badge">[PRJ-04 · LOW-LEVEL]</span>
+                <span class="mono-label">2026</span>
+              </div>
+              <h3 class="project-card-title">MemoryPool Visualizer</h3>
+              <p class="project-card-desc">
+                An interactive terminal visualizer rendering real-time memory chunk allocations, free-list pointer traversals, and alignment padding to teach freshmen pointer arithmetic.
+              </p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="project-stack-pill">C Systems</span>
+              <span class="project-stack-pill">Free-Lists</span>
+              <span class="project-stack-pill">Bitwise Ops</span>
+              <span class="project-stack-pill">Pointers</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. EDITORIAL BLOG SECTION
+         ========================================================================== -->
+    <section id="blog" class="blog-section">
+      <div class="container">
+        
+        <div class="section-header-row" style="border-bottom: 1px solid var(--border-light);">
+          <div>
+            <div class="section-eyebrow">// 06. NOTES &amp; DISPATCHES</div>
+            <h2 class="section-title-large" style="color: var(--ink-charcoal);">Blog &amp; Essays</h2>
+          </div>
+          <div>
+            <a href="blog.html" class="mono-tag" style="font-weight: 700;">Open Dedicated Blog Reader →</a>
+          </div>
+        </div>
+
+        <div class="blog-grid">
+          
+          <!-- Blog Card 01 -->
+          <article class="blog-card" data-blog-id="c-mental-model" tabindex="0" role="button" aria-label="Read article: Why C is the Ultimate First-Year Mental Model">
+            <div>
+              <div class="blog-meta-top">
+                <span>SYSTEMS</span>
+                <span>6 MIN READ</span>
+              </div>
+              <h3 class="blog-title">Why C is the Ultimate First-Year Mental Model</h3>
+              <p class="blog-snippet">
+                When you understand that memory is just a contiguous sequence of numbered lockers, debugging higher-level runtimes ceases to be magic.
+              </p>
+            </div>
+            <div class="blog-read-link">Read Full Essay ↗</div>
+          </article>
+
+          <!-- Blog Card 02 -->
+          <article class="blog-card" data-blog-id="prompt-engineering-pipelines" tabindex="0" role="button" aria-label="Read article: Prompt Engineering as Functional Architecture">
+            <div>
+              <div class="blog-meta-top">
+                <span>AI HEURISTICS</span>
+                <span>5 MIN READ</span>
+              </div>
+              <h3 class="blog-title">Prompt Engineering as Functional Architecture</h3>
+              <p class="blog-snippet">
+                Moving past natural language chat toward typed JSON outputs, deterministic evaluation loops, and composable UNIX-style pipelines.
+              </p>
+            </div>
+            <div class="blog-read-link">Read Full Essay ↗</div>
+          </article>
+
+          <!-- Blog Card 03 -->
+          <article class="blog-card" data-blog-id="freshman-playbook" tabindex="0" role="button" aria-label="Read article: Freshman Playbook">
+            <div>
+              <div class="blog-meta-top">
+                <span>STUDENT LIFE</span>
+                <span>4 MIN READ</span>
+              </div>
+              <h3 class="blog-title">Freshman Playbook: Badminton, Bitwise Math, and Late-Night Builds</h3>
+              <p class="blog-snippet">
+                Why physical court rallies and analog sketchbooks are the most effective counterweights to 12-hour terminal debugging marathons.
+              </p>
+            </div>
+            <div class="blog-read-link">Read Full Essay ↗</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       9. CONTACT FOOTER (BOLD RED ACCENT BACKGROUND)
+       ========================================================================== -->
+  <footer id="contact" class="contact-footer">
+    <div class="container">
+      
+      <!-- Huge Let's Talk CTA Link -->
+      <div class="footer-top">
+        <div class="footer-eyebrow">
+          <span>// 07. GET IN TOUCH</span>
+          <span>·</span>
+          <span>AVAILABLE FOR INVENTIONS &amp; COLLABORATION</span>
+        </div>
+        <a href="mailto:hello@nishant.dev" class="footer-cta-link" aria-label="Send email to hello@nishant.dev">
+          <span>Let’s talk</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="19" x2="19" y2="5"></line>
+            <polyline points="5 5 19 5 19 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Footer Details Grid -->
+      <div class="footer-details-grid">
+        
+        <!-- Col 1: Direct Contact -->
+        <div>
+          <div class="footer-col-title">Direct Channels</div>
+          <div class="footer-contact-item">
+            <a href="mailto:hello@nishant.dev" class="footer-contact-link">hello@nishant.dev</a>
+            <button class="copy-btn copy-email-btn" aria-label="Copy email address to clipboard">Copy</button>
+          </div>
+          <div class="footer-contact-item">
+            <a href="tel:+919876543210" class="footer-contact-link">+91 98765 43210</a>
+          </div>
+          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.8125rem; opacity: 0.85;">
+            📍 India // IST (UTC +5:30)
+          </div>
+        </div>
+
+        <!-- Col 2: Social Links -->
+        <div>
+          <div class="footer-col-title">Social / Networks</div>
+          <ul class="footer-links-list">
+            <li>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-sub-link">
+                GitHub <span>↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-sub-link">
+                LinkedIn <span>↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-sub-link">
+                X / Twitter <span>↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Utility Links -->
+        <div>
+          <div class="footer-col-title">Utility &amp; Docs</div>
+          <ul class="footer-links-list">
+            <li>
+              <a href="projects.html" class="footer-sub-link">All Projects <span>→</span></a>
+            </li>
+            <li>
+              <a href="blog.html" class="footer-sub-link">Blog &amp; Field Notes <span>→</span></a>
+            </li>
+            <li>
+              <a href="#hero" class="footer-sub-link copy-email-btn">Resume (Request PDF) <span>↗</span></a>
+            </li>
+            <li>
+              <a href="#" class="footer-sub-link" onclick="alert('Viewing Classic Portfolio Archive (2025). Redirecting to minimal view.'); return false;">Classic portfolio <span>↗</span></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>© 2026 Nishant · All rights reserved.</div>
+        <div style="display: flex; gap: 2rem; align-items: center;">
+          <span style="opacity: 0.8;">B.Tech CSE Year One — India</span>
+          <a href="#hero" class="back-to-top-btn" aria-label="Back to top of page">
+            Back to top ↑
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       10. REUSABLE MODAL CONTAINER (FOR SELECTED WORK & BLOG ESSAYS)
+       ========================================================================== -->
+  <div id="site-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <div id="modal-eyebrow" class="mono-label" style="color: var(--accent-red); margin-bottom: 0.5rem;">CATEGORY // METRIC</div>
+        <h3 id="modal-title" class="modal-title">Modal Title</h3>
+        <div class="modal-meta-row">
+          <span>NISHANT EXPERIMENTS</span>
+          <span>·</span>
+          <span>VERIFIED SPEC</span>
+        </div>
+        <div id="modal-body-content">
+          <!-- Dynamic Content Loaded by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Badge -->
+  <div id="toast-msg" class="toast-msg" role="status" aria-live="polite">✓ Copied to clipboard</div>
+
+  <!-- Main JavaScript Engine -->
+  <script src="js/main.js"></script>
+</body>
+</html>

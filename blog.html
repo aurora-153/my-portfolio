@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog &amp; Field Notes — Nishant | Creative Developer</title>
+  <meta name="description" content="Essays, engineering field notes, and freshman reflections on C systems, prompt engineering, and creative technology by Nishant.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23E6392E'/><text x='50%' y='65%' font-family='Anton' font-size='56' fill='%23FFFFFF' text-anchor='middle'>N</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Nishant Homepage">
+        <span class="brand-dot"></span>
+        <span>NISHANT</span>
+        <span class="brand-sub">/ FIELD NOTES</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#expertise" class="nav-link">Expertise</a></li>
+          <li><a href="index.html#work" class="nav-link">Selected Work</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html" class="nav-cta">← Back to Portfolio</a>
+      </div>
+
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html" class="mobile-drawer-link">00. Home</a></li>
+      <li><a href="index.html#about" class="mobile-drawer-link">01. About</a></li>
+      <li><a href="index.html#expertise" class="mobile-drawer-link">02. Expertise</a></li>
+      <li><a href="index.html#work" class="mobile-drawer-link">03. Selected Work</a></li>
+      <li><a href="projects.html" class="mobile-drawer-link">04. Real Projects</a></li>
+      <li><a href="blog.html" class="mobile-drawer-link" style="color: var(--accent-red);">05. Blog</a></li>
+      <li><a href="index.html#contact" class="mobile-drawer-link">06. Contact</a></li>
+    </ul>
+  </div>
+
+  <main style="padding-top: 110px; padding-bottom: 6rem;">
+    
+    <!-- Hero Header -->
+    <section class="container" style="margin-bottom: 4rem;">
+      <div style="border-bottom: 1px solid var(--border-light); padding-bottom: 2rem;">
+        <span class="mono-label">// ESSAYS &amp; TECHNICAL ESSAYS</span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 5.5vw, 4.25rem); text-transform: uppercase; line-height: 0.98; margin: 1rem 0;">
+          DISPATCHES
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--ink-muted); max-width: 680px; line-height: 1.65;">
+          Notes on systems thinking, manual memory allocations, modern prompt heuristics, and cultivating analog creative sanity amidst first-year engineering.
+        </p>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem;">
+          <img src="assets/portrait.jpg" alt="Nishant" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--accent-red); filter: grayscale(100%);">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700; color: var(--ink-charcoal);">Nishant</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-muted);">B.Tech CSE '26 · India · Developer &amp; Systems Enthusiast</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles List -->
+    <section class="container" style="max-width: 960px; display: flex; flex-direction: column; gap: 4.5rem;">
+
+      <!-- Article 01 -->
+      <article style="background: #FFFFFF; padding: clamp(2rem, 5vw, 3.5rem); border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: 0 10px 30px rgba(22,22,22,0.03);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="mono-tag" style="background: rgba(22,22,22,0.05); font-weight: 700;">SYSTEMS &amp; C ARCHITECTURE</span>
+          <span class="mono-label">MARCH 2026 · 6 MIN READ</span>
+        </div>
+
+        <h2 style="font-family: var(--font-serif); font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.15; color: var(--ink-charcoal); margin-bottom: 1.5rem;">
+          Why C is the Ultimate First-Year Mental Model
+        </h2>
+
+        <div class="modal-content-prose">
+          <p>
+            In modern computer science programs, there is an ongoing curriculum debate: should universities start freshmen with high-level languages like Python, ergonomic systems languages like Rust, or venerable classics like C?
+          </p>
+          <p>
+            After spending my first two semesters writing command-line utilities, memory arenas, and terminal renderers, my conclusion is absolute: <strong>C teaches you the fundamental physics of computing</strong>.
+          </p>
+          <p>
+            When you create an array in Python or allocate an object in JavaScript, the runtime graciously shields you from the machine. You never experience cache misses, you don't calculate byte alignments, and you never trace a dangling stack pointer. But in C, there are no safety harnesses. Memory is simply a contiguous strip of numbered lockers extending across silicon.
+          </p>
+
+          <pre><code>// Contiguous memory buffer arena implementation
+typedef struct {
+    size_t capacity;
+    size_t offset;
+    uint8_t *data;
+} Arena;
+
+void *arena_push(Arena *a, size_t bytes) {
+    size_t aligned = (bytes + 7) &amp; ~7; // Enforce 8-byte alignment
+    if (a-&gt;offset + aligned &gt; a-&gt;capacity) {
+        fprintf(stderr, "FATAL: Arena capacity exceeded\\n");
+        return NULL;
+    }
+    void *ptr = &amp;a-&gt;data[a-&gt;offset];
+    a-&gt;offset += aligned;
+    return ptr;
+}</code></pre>
+
+          <p>
+            Once you write your own allocator, the veil falls away. You realize that a string is just an array of chars terminated by a null zero, a function call is an entry on the stack frame, and a segmentation fault is the operating system revoking your address privilege. When you step back into high-level programming, you aren't guessing anymore; you can predict what the CPU is actually doing.
+          </p>
+        </div>
+      </article>
+
+      <!-- Article 02 -->
+      <article style="background: #FFFFFF; padding: clamp(2rem, 5vw, 3.5rem); border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: 0 10px 30px rgba(22,22,22,0.03);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="mono-tag" style="background: rgba(230,57,46,0.08); color: var(--accent-red); font-weight: 700;">AI HEURISTICS</span>
+          <span class="mono-label">FEBRUARY 2026 · 5 MIN READ</span>
+        </div>
+
+        <h2 style="font-family: var(--font-serif); font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.15; color: var(--ink-charcoal); margin-bottom: 1.5rem;">
+          Prompt Engineering as Functional Architecture
+        </h2>
+
+        <div class="modal-content-prose">
+          <p>
+            Prompt engineering is commonly misunderstood as simply "conversing well with a chatbot." But in production software development and automated coding pipelines, it has little to do with casual conversation. It is <strong>functional pipeline design over probabilistic machines</strong>.
+          </p>
+          <p>
+            Just as a Unix pipeline streams raw bytes through a chain of deterministic filters (<code>grep</code>, <code>awk</code>, <code>sort</code>), a robust LLM pipeline chains narrow, verifiable tasks:
+          </p>
+          
+          <pre><code>[Unstructured Problem Spec]
+    │
+    ▼
+[Extraction Stage]      ──&gt; Emits strict JSON AST
+    │
+    ▼
+[Verification Stage]    ──&gt; Checks invariant conditions
+    │
+    ▼
+[Code Generator]        ──&gt; Emits minimal test-driven implementation
+    │
+    ▼
+[Local Compiler]        ──&gt; clang -O3 verification</code></pre>
+
+          <p>
+            When you enforce typed JSON outputs and provide negative few-shot examples, hallucinations plummet to near-zero. As first-year students in 2026, pairing low-level systems mechanics with high-level prompt-driven automation gives us the velocity of a 10-person team.
+          </p>
+        </div>
+      </article>
+
+      <!-- Article 03 -->
+      <article style="background: #FFFFFF; padding: clamp(2rem, 5vw, 3.5rem); border-radius: var(--radius-md); border: 1px solid var(--border-light); box-shadow: 0 10px 30px rgba(22,22,22,0.03);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="mono-tag green">CULTURE &amp; OFF-SCREEN</span>
+          <span class="mono-label">JANUARY 2026 · 4 MIN READ</span>
+        </div>
+
+        <h2 style="font-family: var(--font-serif); font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.15; color: var(--ink-charcoal); margin-bottom: 1.5rem;">
+          Freshman Playbook: Badminton, Bitwise Math, and Late-Night Builds
+        </h2>
+
+        <div class="modal-content-prose">
+          <p>
+            Starting engineering college in India means confronting an avalanche of exams, lab practicals, hackathons, and endless screen time. It is terrifyingly easy to spend 14 hours hunched over an illuminated monitor debugging segmentation faults until your vision blurs.
+          </p>
+          <p>
+            The best defense against developer burnout is having non-negotiable analog counterweights:
+          </p>
+          <ul>
+            <li><strong>Badminton court sprints:</strong> Tracking a feathered shuttlecock moving at 200 km/h requires full physical presence. You cannot obsess over dangling pointers while executing a cross-court backhand smash.</li>
+            <li><strong>Character sketching with ink:</strong> Drawing forces you to look at negative space, light, and proportions without an undo command (<code>Ctrl+Z</code>). Every stroke matters.</li>
+            <li><strong>Ambient audio loops:</strong> Heavy binaural drones create a dedicated sensory pocket for 3-hour deep work coding marathons.</li>
+          </ul>
+          <p>
+            Software is an intellectual craft, but your mind depends on your body. Maintain the invariants.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Red Contact Footer -->
+  <footer class="contact-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-eyebrow">// WANT TO DISCUSS AN ESSAY?</div>
+        <a href="mailto:hello@nishant.dev" class="footer-cta-link">
+          <span>Let’s talk</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="19" x2="19" y2="5"></line>
+            <polyline points="5 5 19 5 19 19"></polyline>
+          </svg>
+        </a>
+      </div>
+      <div class="footer-details-grid">
+        <div>
+          <div class="footer-col-title">Direct Contact</div>
+          <div class="footer-contact-item">
+            <a href="mailto:hello@nishant.dev" class="footer-contact-link">hello@nishant.dev</a>
+          </div>
+          <div class="footer-contact-item">
+            <a href="tel:+919876543210" class="footer-contact-link">+91 98765 43210</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-sub-link">Portfolio Home <span>→</span></a></li>
+            <li><a href="projects.html" class="footer-sub-link">Real Projects Archive <span>→</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Social Networks</div>
+          <ul class="footer-links-list">
+            <li><a href="https://github.com" target="_blank" class="footer-sub-link">GitHub <span>↗</span></a></li>
+            <li><a href="https://linkedin.com" target="_blank" class="footer-sub-link">LinkedIn <span>↗</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div>© 2026 Nishant · Written with ink &amp; code in India.</div>
+        <a href="#" class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

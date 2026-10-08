@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="warmGrayBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBE8E1"/>
+      <stop offset="50%" stop-color="#E2DFD7"/>
+      <stop offset="100%" stop-color="#D7D4CB"/>
+    </linearGradient>
+    <radialGradient id="portraitVignette" cx="50%" cy="45%" r="65%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#141414" stop-opacity="0.18"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="1000" fill="url(#warmGrayBg)"/>
+  
+  <!-- Studio Lighting Soft Radial -->
+  <circle cx="420" cy="380" r="340" fill="#FFFFFF" opacity="0.32"/>
+
+  <!-- Subtle Editorial Framing Lines -->
+  <line x1="40" y1="40" x2="760" y2="40" stroke="#161616" stroke-width="1" stroke-opacity="0.12"/>
+  <line x1="40" y1="960" x2="760" y2="960" stroke="#161616" stroke-width="1" stroke-opacity="0.12"/>
+  <text x="50" y="70" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#161616" letter-spacing="3" opacity="0.45">NISHANT // 28.6139° N, 77.2090° E</text>
+  <text x="660" y="70" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#161616" letter-spacing="2" opacity="0.45">FIG. 01</text>
+
+  <!-- Group: Stylized Editorial Grayscale Portrait -->
+  <g id="portrait-figure" transform="translate(0, 40)">
+    <!-- Base Shadow Behind Torso -->
+    <ellipse cx="400" cy="850" rx="310" ry="160" fill="#111111" opacity="0.15"/>
+
+    <!-- Shoulders & Garment (Minimalist Dark Charcoal Overcoat / Knit) -->
+    <path d="M120 960 C120 780, 240 680, 310 650 L340 640 L370 690 L430 690 L460 640 L490 650 C560 680, 680 780, 680 960 Z" fill="#181818"/>
+    <!-- Collar & Lapel details -->
+    <path d="M310 650 L380 770 L400 860 L420 770 L490 650 L450 635 L400 710 L350 635 Z" fill="#222222"/>
+    <path d="M380 770 L400 960 L420 770 Z" fill="#121212"/>
+    <path d="M340 640 L400 710 L370 690 Z" fill="#2B2B2B"/>
+    <path d="M460 640 L400 710 L430 690 Z" fill="#2B2B2B"/>
+    <!-- Subtle seam lines -->
+    <path d="M260 760 C320 730, 350 720, 380 770" stroke="#333333" stroke-width="2" fill="none"/>
+    <path d="M540 760 C480 730, 450 720, 420 770" stroke="#333333" stroke-width="2" fill="none"/>
+
+    <!-- Neck & Throat -->
+    <path d="M350 500 C350 560, 365 650, 400 665 C435 650, 450 560, 450 500 Z" fill="#757575"/>
+    <path d="M365 520 C380 580, 395 640, 400 665 C405 640, 420 580, 435 520 Z" fill="#5E5E5E"/>
+    <!-- Adam's apple -->
+    <path d="M395 560 L400 585 L405 560 Z" fill="#474747"/>
+
+    <!-- Jaw, Face Base & Bone Structure -->
+    <path d="M275 380 C275 510, 320 600, 400 600 C480 600, 525 510, 525 380 C525 250, 480 180, 400 180 C320 180, 275 250, 275 380 Z" fill="#A8A8A8"/>
+    <!-- Facial Shadow Planes (Editorial Chiaroscuro) -->
+    <path d="M275 380 C275 490, 320 580, 380 595 C350 560, 335 480, 335 380 C335 280, 360 210, 400 180 C320 180, 275 250, 275 380 Z" fill="#8C8C8C"/>
+    <!-- Jawline definition shadow -->
+    <path d="M320 500 C350 570, 375 595, 400 600 C425 595, 450 570, 480 500 C465 550, 430 585, 400 585 C370 585, 335 550, 320 500 Z" fill="#505050"/>
+
+    <!-- Ears -->
+    <path d="M260 360 C250 400, 260 450, 280 460 L285 410 Z" fill="#787878"/>
+    <path d="M540 360 C550 400, 540 450, 520 460 L515 410 Z" fill="#909090"/>
+
+    <!-- Hair (Modern Textured Fade / Crop) -->
+    <path d="M265 350 C255 240, 300 130, 400 125 C500 130, 545 240, 535 350 C520 280, 490 220, 400 215 C310 220, 280 280, 265 350 Z" fill="#1C1C1C"/>
+    <path d="M280 240 C320 150, 380 135, 430 135 C480 135, 520 160, 530 220 C490 170, 430 160, 380 170 C330 180, 300 210, 280 240 Z" fill="#111111"/>
+    <path d="M370 130 C385 110, 410 112, 425 128 C415 120, 395 120, 370 130 Z" fill="#252525"/>
+    <path d="M430 132 C450 115, 475 125, 485 145 C470 135, 450 132, 430 132 Z" fill="#222222"/>
+
+    <!-- Eyebrows -->
+    <path d="M315 330 C340 318, 365 322, 380 334 C360 330, 335 328, 315 338 Z" fill="#1E1E1E"/>
+    <path d="M485 330 C460 318, 435 322, 420 334 C440 330, 465 328, 485 338 Z" fill="#1E1E1E"/>
+
+    <!-- Eyes (Focused Developer Gaze) -->
+    <ellipse cx="348" cy="365" rx="22" ry="12" fill="#F4F4F4"/>
+    <ellipse cx="350" cy="365" rx="11" ry="11" fill="#202020"/>
+    <circle cx="353" cy="362" r="3.5" fill="#FFFFFF"/>
+    <path d="M326 362 C338 352, 360 352, 372 362" stroke="#161616" stroke-width="3" fill="none"/>
+    <path d="M330 368 C342 374, 358 374, 368 368" stroke="#444444" stroke-width="1.5" fill="none"/>
+
+    <ellipse cx="452" cy="365" rx="22" ry="12" fill="#F4F4F4"/>
+    <ellipse cx="450" cy="365" rx="11" ry="11" fill="#202020"/>
+    <circle cx="453" cy="362" r="3.5" fill="#FFFFFF"/>
+    <path d="M428 362 C440 352, 462 352, 474 362" stroke="#161616" stroke-width="3" fill="none"/>
+    <path d="M432 368 C444 374, 460 374, 470 368" stroke="#444444" stroke-width="1.5" fill="none"/>
+
+    <!-- Sleek Wireframe Glasses -->
+    <rect x="318" y="340" width="64" height="46" rx="14" fill="none" stroke="#111111" stroke-width="3"/>
+    <rect x="418" y="340" width="64" height="46" rx="14" fill="none" stroke="#111111" stroke-width="3"/>
+    <path d="M382 356 C394 350, 406 350, 418 356" stroke="#111111" stroke-width="3" fill="none"/>
+    <path d="M328 348 L355 348 L335 378 L328 378 Z" fill="#FFFFFF" opacity="0.16"/>
+    <path d="M428 348 L455 348 L435 378 L428 378 Z" fill="#FFFFFF" opacity="0.16"/>
+
+    <!-- Nose Structure -->
+    <path d="M400 335 L394 425 L382 435 L400 442 L418 435 L406 425 Z" fill="#757575"/>
+    <path d="M394 425 L385 435 L400 440 Z" fill="#4B4B4B"/>
+    <path d="M406 425 L415 435 L400 440 Z" fill="#585858"/>
+    <ellipse cx="388" cy="434" rx="4" ry="2.5" fill="#2B2B2B"/>
+    <ellipse cx="412" cy="434" rx="4" ry="2.5" fill="#2B2B2B"/>
+
+    <!-- Lips -->
+    <path d="M365 488 C385 482, 415 482, 435 488 C420 495, 380 495, 365 488 Z" fill="#424242"/>
+    <path d="M370 488 C385 498, 415 498, 430 488 C418 504, 382 504, 370 488 Z" fill="#606060"/>
+    <line x1="365" y1="488" x2="435" y2="488" stroke="#222222" stroke-width="2"/>
+
+    <!-- Signature Red Accent Geometry -->
+    <circle cx="510" cy="335" r="4" fill="#E6392E"/>
+    <rect x="530" y="325" width="28" height="1" fill="#E6392E"/>
+    <text x="566" y="329" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#E6392E" letter-spacing="1">ID: 01_DEV</text>
+  </g>
+
+  <!-- Vignette Overlay -->
+  <rect width="800" height="1000" fill="url(#portraitVignette)"/>
+
+  <!-- Minimal Corner Crop Marks -->
+  <path d="M 30 50 L 30 30 L 50 30" fill="none" stroke="#161616" stroke-width="1.5" stroke-opacity="0.3"/>
+  <path d="M 770 50 L 770 30 L 750 30" fill="none" stroke="#161616" stroke-width="1.5" stroke-opacity="0.3"/>
+  <path d="M 30 950 L 30 970 L 50 970" fill="none" stroke="#161616" stroke-width="1.5" stroke-opacity="0.3"/>
+  <path d="M 770 950 L 770 970 L 750 970" fill="none" stroke="#161616" stroke-width="1.5" stroke-opacity="0.3"/>
+</svg>
